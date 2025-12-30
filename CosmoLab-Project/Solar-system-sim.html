@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="favicon.png">
+	<link rel="stylesheet" href="Solar-system-style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+	<title>Fiche AstroPhysique La Gravité simulation</title>
+	<style>
+		html,
+		body {
+			background-color: black;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			overscroll-behavior: none;
+		}
+	</style>
+</head>
+
+<body>
+	<main><h2 id="title">Orbite & gravitation !</h2></main>
+	
+	<!-- ONLINE LINKS -->
+	<script src="https://q5js.org/q5.js"></script>
+	<script src="https://p5play.org/v3/planck.min.js"></script>
+	<script src="https://p5play.org/v3/p5play.js"></script>
+	<div id="explanations">
+	<p>
+	<b>NOTE:</b><br><br>Pour créer une planète, commencez par renseigner correctement ses caractéristiques (taille et masse) dans les champs prévus, puis appuyez sur la touche <strong>Entrée</strong><br> <strong style="color: rgb(235, 91, 66);">Attention</strong> : si ces valeurs ne sont pas remplies ou sont invalides, aucune planète ne sera générée.<br> Une fois créée, la dernière planète générée peut être contrôlée à la souris : en maintenant le clic, elle suivra le curseur. Cela vous permet de lui donner une impulsion initiale en la relâchant,<br> afin d’observer l’effet de la gravité exercée par le Soleil, ou même d’essayer de la placer sur une orbite stable autour de celui-ci.
+	</p>
+	</div>
+	<div class="info-container">
+		<label class='labels' for="mass">Entrer la masse de votre planet:</label><br>
+		<input class='inputs' type="text" id="mass" placeholder="masse relative à la terre"><br>
+		<label class='labels' for="size">Entrer la taille de votre planet en px:</label><br>
+		<input class='inputs' type="text" id="size" placeholder="ex: 50, 30">
+	</div>
+
+	<!-- YOUR SKETCH -->
+	<script src="Solar-system.js"></script>
+</body>
+
+</html>
