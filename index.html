@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Gravitation-style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <title>Fiche AstroPhysique La Gravité</title>
+</head>
+<body>
+
+<header>
+    <h2 id="subtitle">Fiche | physique - La gravité</h2><br>
+    <h1 id="title">La gravitation</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a class="nav-links" href="#definition">Définition</a></li>
+        <li><a class="nav-links" href="#law">Loi de Newton</a></li>
+        <li><a class="nav-links" href="#Application">Astronomie et gravité</a></li>
+        <li><a class="nav-links" href="#Einstein">Après Newton</a></li>
+        <li><a class="nav-links" href="#Simulation">Simulation interactive</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <!-- DEFINITION -->
+    <div id="definition">
+        <h3 id="title-definition">📕 Définition :</h3><br>
+        <p>
+            La gravitation est une force fondamentale de la nature qui agit entre tous les objets
+            possédant une masse. Cette force provoque une attraction mutuelle entre les corps,
+            quelle que soit leur taille. C’est la gravité qui nous maintient à la surface de la Terre
+            et qui permet aux planètes, étoiles et galaxies de se structurer et d’évoluer.
+        </p>
+    </div>
+
+    <!-- LOI DE NEWTON -->
+    <div class="section" id="law">
+        <h3 id="title-law">La loi de la gravitation universelle</h3>
+        <p class="textcontent">
+            En 1687, le physicien Isaac Newton formule la loi de la gravitation universelle.
+            Cette loi établit que deux corps s’attirent avec une force proportionnelle à leur masse
+            et inversement proportionnelle au carré de la distance qui les sépare.
+        </p>
+
+        <div id="equation">
+            <p>F = G · (m₁ · m₂) / r²</p>
+        </div>
+
+        <div id="definer">
+            <div class="value" style="grid-area: box1;">
+                G : constante gravitationnelle (6,67430 × 10⁻¹¹ N·m²/kg²)
+            </div>
+            <div class="value" style="grid-area: box2;">
+                m₁ : masse du premier corps
+            </div>
+            <div class="value" style="grid-area: box3;">
+                m₂ : masse du second corps
+            </div>
+            <div class="value" style="grid-area: box4;">
+                r : distance entre les centres des deux corps
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTROLS -->
+    <div id="button-container">
+        <button id="start">Start</button>
+        <button id="repeat">Repeat</button>
+        <button id="pause">Pause</button>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://q5js.org/q5.js"></script>
+    <script src="https://p5play.org/v3/planck.min.js"></script>
+    <script src="https://p5play.org/v3/p5play.js"></script>
+    <script src="gravity_demo.js"></script>
+
+    <!-- APPLICATIONS -->
+    <div class="section" id="Application">
+        <h3 id="title-application">Gravité et astronomie</h3>
+        <p class="textcontent">
+            La gravité joue un rôle central en astronomie. Elle est responsable du mouvement
+            des corps célestes et de l’organisation de l’Univers. Sans la gravité, il n’y aurait
+            ni étoiles, ni planètes, ni galaxies.
+        </p>
+
+        <div id="topics-container">
+            <div class="topics">Orbites planétaires</div>
+            <div class="topics">Formation des étoiles</div>
+            <div class="topics">Galaxies</div>
+            <div class="topics">Trous noirs</div>
+        </div>
+    </div>
+
+    <!-- EINSTEIN -->
+    <div class="section" id="Einstein">
+        <h3 id="title-einstein">Après Newton…</h3>
+        <p>
+            Bien que la loi de Newton soit très efficace pour décrire la majorité des phénomènes
+            gravitationnels, elle présente des limites dans des conditions extrêmes.
+            Au début du XXᵉ siècle, Albert Einstein propose la théorie de la relativité générale,
+            selon laquelle la gravité n’est plus une force, mais une déformation de l’espace-temps
+            causée par la présence de masse et d’énergie.
+        </p>
+    </div>
+
+    <!-- SIMULATION -->
+    <div class="section" id="Simulation">
+        <h3 id="simulation-title">Simulations interactives</h3>
+        <p>
+            Les simulations interactives permettent de mieux comprendre la gravité en visualisant
+            directement ses effets. En modifiant des paramètres comme la masse ou la vitesse,
+            il devient possible d’observer la formation d’orbites, les collisions ou encore
+            l’influence d’un corps très massif.
+        </p>
+        <a href="Solar-system-sim.html">
+            <button class="button-29">Lancer la simulation</button>
+        </a>
+    </div>
+
+</main>
+
+</body>
+</html>
