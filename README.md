@@ -1,26 +1,48 @@
-# p5play-template
 
-Visit <https://p5play.org> to learn how to use p5play.
+# 🌌 CosmoLab
 
-This folder contains a basic p5play + [q5.js](https://q5js.org) template to help get you started on your own p5play project! 😃🎮
+**CosmoLab** est une application web éducative interactive dédiée à la découverte de l’astronomie et des phénomènes astrophysiques.  
+Le projet vise à rendre accessibles des concepts complexes grâce à la **visualisation**, à l’**interactivité** et à des **simulations numériques**.
 
-## Contents
+Ce projet est réalisé dans le cadre du **Projet Personnel du PEI (IB)**.
 
-`favicon.png` - the icon for the web page, which appears on the browser tab  
-`index.html` - the webpage that runs your sketch.js code  
-`jsconfig.json` - a file that enables auto-complete and hover documentation for p5play in code editors like Visual Studio Code  
-`sketch.js` - write your code in the sketch file
+---
 
-## Getting Started
+## 🎯 Objectif du projet
 
-Use the [p5play VSCode](https://marketplace.visualstudio.com/items?itemName=quinton-ashley.p5play-vscode) or [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension for Visual Studio Code to run your project.
+L’objectif principal de CosmoLab est de proposer une alternative ludique et intuitive à l’apprentissage traditionnel de l’astronomie, en permettant aux utilisateurs de :
 
-## Offline Use
+- Comprendre des phénomènes astrophysiques complexes
+- Visualiser des lois physiques abstraites
+- Construire une intuition scientifique grâce à l’interactivité
 
-For offline use, install [bun](https://bun.sh/) or [npm](https://nodejs.org). Then in the file menu hover over "Terminal" and select "New Terminal". In your p5play project folder run `bun i` to install the q5 and p5play packages.
+---
 
-Note that to participate in p5play game jams your project must use the latest version of p5play. Use `bun up` or `npm up` to update packages to the latest versions.
+## 🧠 Thématiques abordées
 
-## Read me, Read me!
+- Gravitation universelle (Newton)
+- Mécaniques orbitales
+- Systèmes planétaires
+- Introduction à la relativité générale
+- Phénomènes astrophysiques (trous noirs, lentille gravitationnelle, etc.)
 
-This message will now self-destruct in 5... 4... just kidding! But you can delete the contents of this file and write a README.md file that describes your own project.
+---
+
+## 🧪 Fonctionnalités principales
+
+- 📘 Pages de cours structurées et illustrées
+- 🎮 Simulations interactives en temps réel
+- 🧭 Visualisation de systèmes astronomiques
+- 🌍 Interface web moderne et responsive
+
+---
+
+## 🛠️ Technologies utilisées
+
+- **HTML / CSS** – structure et design
+- **JavaScript** – logique et interactivité
+- **p5.js / p5play** – simulations physiques et graphiques
+- **React.js** (prévu) – structuration de l’application
+- **Git & GitHub** – gestion de version
+- **Vercel / GitHub Pages** – hébergement
+
