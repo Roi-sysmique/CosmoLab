@@ -212,8 +212,12 @@ canvas{
     height:50px;
     border-radius: 10px;
     border:none;
-    background-color: palegreen;
+    background-color: lightgoldenrodyellow;
     transition: all 225ms ease 0s;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #repeat{
@@ -224,7 +228,7 @@ canvas{
     border-radius: 100px;
     background-color: rgba(240, 248, 255, 0);
     color: crimson;
-    font-size: 15px;
+    font-size: 25px;
     align-items: center;
     justify-content: center;
     transition: all 225ms ease 0s;
@@ -239,7 +243,7 @@ canvas{
 }
 
 #start:hover{
-    box-shadow: 0 0 10px rgb(160, 250, 160);
+    box-shadow: 0 0 10px rgb(253, 253, 218);
 }
 
 #start:active{
@@ -256,9 +260,10 @@ canvas{
   box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
   color: green;
   cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  display: flex;
   padding: 7px 20px;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   text-decoration: none;
   transition: all 250ms;

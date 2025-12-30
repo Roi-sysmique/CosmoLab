@@ -1,4 +1,3 @@
-
 # 🌌 CosmoLab
 
 **CosmoLab** est une application web éducative interactive dédiée à la découverte de l’astronomie et des phénomènes astrophysiques.  
@@ -45,4 +44,3 @@ L’objectif principal de CosmoLab est de proposer une alternative ludique et in
 - **React.js** (prévu) – structuration de l’application
 - **Git & GitHub** – gestion de version
 - **Vercel / GitHub Pages** – hébergement
-
