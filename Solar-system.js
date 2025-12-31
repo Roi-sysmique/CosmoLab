@@ -2,10 +2,11 @@ let sun, earth, moon, planets, size, mass;
 const G = 6.67430e-11; 
 const mass_input = document.getElementById('mass');
 const size_input = document.getElementById('size');
+const repeat_button = document.querySelector('.button-82-pushable');
 
 function setup(){
-	canvas = createCanvas(1150, 700);
-
+	const c = createCanvas(1100, 700);
+    c.parent("canvas-container");
 	sun = new Sprite(halfWidth, halfHeight, 75, DYN);
 	sun.color = 'lightyellow';
 
@@ -43,6 +44,9 @@ function setup(){
 	s.layer = 1;
 	}
 	planet_images = ['🪐', '🌚', '🌕', '🟠'];
+	repeat_button.addEventListener('click', (event) => {
+		window.location.reload();
+	});
 
 }
 
@@ -56,7 +60,7 @@ function update() {
 	background(22);
 	if (kb.pressed('Enter') && Number(size_input.value) > 0 && Number(mass_input.value) > 0){
 
-		let planet = new planets.Sprite(mouse.x, mouse.y);
+		let planet = new planets.Sprite(50, 50);
 		planet.d = Number(size_input.value);
 		planet.mass = Number(mass_input.value) * earth.mass;
 		planet.image = random(planet_images)
@@ -71,4 +75,8 @@ function update() {
 	earth.attractTo(sun, getGravityForce(earth, sun));
 	sun.attractTo(earth, getGravityForce(sun, earth));
 	allSprites.rotationLock = true;
+	for (let s of allSprites){
+		if (s.x > width+s.w) s.x = 0;
+		if (s.y > height+s.h) s.y = 0;
+	}
 }

@@ -1,8 +1,16 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
 body{
     font-family: Raleway;
     background-color: rgb(43, 38, 38);
     color: white;
     background-image: linear-gradient(to bottom right, rgb(43, 38, 38),  rgba(100, 89, 170, 0.259), rgba(255, 99, 71, 0.182), rgba(102, 101, 101, 0.379));
+    height: 100%;
 }
 header{
     display: flex;
