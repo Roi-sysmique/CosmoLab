@@ -137,6 +137,9 @@ nav{
     flex-direction: row;
     justify-content: space-evenly;
     background-image: linear-gradient(to right, rgba(240, 128, 128, 0.571), rgba(221, 160, 221, 0.588));
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 ul{

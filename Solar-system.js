@@ -61,8 +61,16 @@ function update() {
 	if (kb.pressed('Enter') && Number(size_input.value) > 0 && Number(mass_input.value) > 0){
 
 		let planet = new planets.Sprite(50, 50);
-		planet.d = Number(size_input.value);
-		planet.mass = Number(mass_input.value) * earth.mass;
+		if (size_input.value > 300){
+			planet.d = 300;
+		} else {
+			planet.d = Number(size_input.value);
+		}
+		if (mass_input.value > 3000){
+			planet.mass = 3000 * earth.mass;
+		}else{
+			planet.mass = Number(mass_input.value) * earth.mass;
+		}
 		planet.image = random(planet_images)
 	}
 	if (mouse.pressing() && planets.length > 0){
