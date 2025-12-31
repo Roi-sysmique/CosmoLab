@@ -11,7 +11,8 @@ function setup(){
     obj2 = new Sprite(width * 3/4, halfHeight, 35, DYN);
     obj1.mass = 10**15;
     obj2.mass = 10**15;
-    obj1.color = 'aliceblue';
+    obj1.image = '🍎';
+    obj2.image = '🍏';
     allSprites.rotationLock = true;
     arrow = new Sprite(-50, -50, 30, 10, NONE);
     arrow.image = '➜'

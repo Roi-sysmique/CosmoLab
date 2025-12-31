@@ -29,7 +29,6 @@
 
 <main>
 
-    <!-- DEFINITION -->
     <div id="definition">
         <h3 id="title-definition">📕 Définition :</h3><br>
         <p>
@@ -40,7 +39,6 @@
         </p>
     </div>
 
-    <!-- LOI DE NEWTON -->
     <div class="section" id="law">
         <h3 id="title-law">La loi de la gravitation universelle</h3>
         <p class="textcontent">
@@ -69,20 +67,52 @@
         </div>
     </div>
 
-    <!-- CONTROLS -->
     <div id="button-container">
         <button id="start"><i class="fa-solid fa-circle-play"></i></button>
         <button id="repeat"><i class="fa-solid fa-repeat"></i></button>
         <button id="pause"><i class="fa-solid fa-pause"></i></button>
     </div>
 
-    <!-- SCRIPTS -->
+    <div id="equation-demonstration">
+        <h3 id="title-equation">Démonstration de l'équation</h3>
+    <p class="textcontent">
+        La démonstration interactive située ci-dessus met en évidence la loi de la
+        gravitation universelle de Newton. Deux objets s’attirent mutuellement en
+        fonction de leur masse et de la distance qui les sépare.
+    </p>
+
+    <p class="textcontent">
+        Dans cette simulation, chaque objet possède une masse de
+        <strong>10<sup>15</sup> kg</strong>, une valeur volontairement très élevée
+        comparée à des objets du quotidien. Malgré cela, l’attraction gravitationnelle
+        observée reste faible et peu perceptible à petite échelle.
+    </p>
+
+    <div id="equation">
+        <p>F = G · (10¹⁵ × 10¹⁵) / r²</p>
+    </div>
+
+    <p class="textcontent">
+        Cette expérience montre que la gravité est une force extrêmement faible par
+        rapport aux autres forces fondamentales de la nature. Ce n’est que lorsque
+        les masses deviennent gigantesques, comme celles des planètes, des étoiles
+        ou des galaxies, que ses effets deviennent réellement dominants.
+    </p>
+
+    <p class="textcontent">
+        La simulation permet ainsi de comprendre pourquoi la gravité joue un rôle
+        majeur en astronomie, mais reste négligeable dans la plupart des situations
+        à l’échelle humaine.
+    </p>
+
+
+    </div>
+
     <script src="https://q5js.org/q5.js"></script>
     <script src="https://p5play.org/v3/planck.min.js"></script>
     <script src="https://p5play.org/v3/p5play.js"></script>
     <script src="gravity_demo.js"></script>
 
-    <!-- APPLICATIONS -->
     <div class="section" id="Application">
         <h3 id="title-application">Gravité et astronomie</h3>
         <p class="textcontent">
@@ -99,19 +129,31 @@
         </div>
     </div>
 
-    <!-- EINSTEIN -->
-    <div class="section" id="Einstein">
-        <h3 id="title-einstein">Après Newton…</h3>
-        <p>
-            Bien que la loi de Newton soit très efficace pour décrire la majorité des phénomènes
-            gravitationnels, elle présente des limites dans des conditions extrêmes.
-            Au début du XXᵉ siècle, Albert Einstein propose la théorie de la relativité générale,
-            selon laquelle la gravité n’est plus une force, mais une déformation de l’espace-temps
-            causée par la présence de masse et d’énergie.
-        </p>
-    </div>
+<div class="section" id="Einstein">
+    <h3 id="title-einstein">Après Newton…</h3>
+    <p>
+        Bien que la loi de Newton soit très efficace pour décrire la majorité des phénomènes
+        gravitationnels, elle présente des limites dans des conditions extrêmes.
+        Au début du XXᵉ siècle, Albert Einstein propose la théorie de la relativité générale,
+        selon laquelle la gravité n’est plus une force, mais une déformation de l’espace-temps
+        causée par la présence de masse et d’énergie.
+    </p>
 
-    <!-- SIMULATION -->
+    <p class="textcontent">
+        Si vous souhaitez approfondir ces concepts et mieux comprendre la relativité générale,
+        la vidéo suivante propose une explication visuelle et accessible de la manière dont
+        Einstein a révolutionné notre compréhension de la gravité.
+    </p>
+
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/efQNpe7GOAw?si=istpUVxQcgn0PwL-"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+</div>
+
+
     <div class="section" id="Simulation">
         <h3 id="simulation-title">Simulations interactives</h3>
         <p>
