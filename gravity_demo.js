@@ -4,8 +4,9 @@ const unit_mass = 1.989e30;
 const pause_btn = document.getElementById('pause');
 const start_btn = document.getElementById('start');
 const restart_btn = document.getElementById('repeat');
-function setup(){
-    canvas = createCanvas(500, 200);
+function setup() {
+    const c = createCanvas(500, 300);
+    c.parent("canvas-container");
     world.gravity.y = 0;
     obj1 = new Sprite(halfWidth/2, halfHeight, 40, DYN);
     obj2 = new Sprite(width * 3/4, halfHeight, 35, DYN);

@@ -151,15 +151,22 @@ li{
     transform: translateY(-10px) scale(2);
 }
 
-canvas{
-    position: absolute;
-    top: 170%;
-    left: 33.5%;
-    border-radius: 10px;
+#canvas-container{
+    margin-top: 20px; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
+#canvas-container canvas{
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+
 #law{
-    margin-bottom: 200px;
+    margin-bottom: 0px;
 }
 
 #definer{
