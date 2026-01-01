@@ -29,7 +29,7 @@
 		<h2 id="title">Orbite & gravitation !</h2>
 			<div id="explanations">
 		<p>
-		<b>NOTE:</b><br><br>Pour créer une planète, commencez par renseigner correctement ses caractéristiques (taille et masse) dans les champs prévus, puis appuyez sur la touche <strong>Entrée</strong><br> <strong style="color: rgb(235, 91, 66);">Attention</strong> : si ces valeurs ne sont pas remplies ou sont invalides, aucune planète ne sera générée.<br> Une fois créée, la dernière planète générée peut être contrôlée à la souris : en maintenant le clic, elle suivra le curseur. Cela vous permet de lui donner une impulsion initiale en la relâchant,<br> afin d’observer l’effet de la gravité exercée par le Soleil, ou même d’essayer de la placer sur une orbite stable autour de celui-ci.
+		<b>NOTE:</b><br><br>Pour créer une planète, commencez par renseigner correctement ses caractéristiques (taille et masse) dans les champs prévus, puis appuyez sur le bouton <strong>Créer</strong><br> <strong style="color: rgb(235, 91, 66);">Attention</strong> : si ces valeurs ne sont pas remplies ou sont invalides, aucune planète ne sera générée.<br> Une fois créée, la dernière planète générée peut être contrôlée à la souris : en maintenant le clic, elle suivra le curseur. Cela vous permet de lui donner une impulsion initiale en la relâchant,<br> afin d’observer l’effet de la gravité exercée par le Soleil, ou même d’essayer de la placer sur une orbite stable autour de celui-ci.
 		</p>
 		</div>
 		<div class="info-container">
@@ -38,13 +38,16 @@
 			<label class='labels' for="size">Entrer la taille de votre planet en px:</label><br>
 			<input class='inputs' type="number" id="size" placeholder="ex: 50, 30" min="5" max="100">
 		</div>
-		<button class="button-82-pushable" role="button">
-			<span class="button-82-shadow"></span>
-			<span class="button-82-edge"></span>
-			<span class="button-82-front text">
-				Repeat
-			</span>
-		</button>
+		<div id="button-container">
+			<button class="button-82-pushable" role="button">
+				<span class="button-82-shadow"></span>
+				<span class="button-82-edge"></span>
+				<span class="button-82-front text">
+					Repeat
+				</span>
+			</button>
+			<button class="button-86" role="button">Créer</button>
+		</div>
 	</div>
 	<div id="canvas-container"></div>
 	</main>

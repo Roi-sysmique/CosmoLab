@@ -3,9 +3,12 @@ const G = 6.67430e-11;
 const mass_input = document.getElementById('mass');
 const size_input = document.getElementById('size');
 const repeat_button = document.querySelector('.button-82-pushable');
+const loss_width_percent = 0.3;
+const loss_height_percent = .1;
+const start_btn = document.querySelector('.button-86');
 
 function setup(){
-	const c = createCanvas(1100, 700);
+	const c = createCanvas(window.innerWidth - window.innerWidth*loss_width_percent, window.innerHeight - window.innerHeight*loss_height_percent);
     c.parent("canvas-container");
 	sun = new Sprite(halfWidth, halfHeight, 75, DYN);
 	sun.color = 'lightyellow';
@@ -47,6 +50,22 @@ function setup(){
 	repeat_button.addEventListener('click', (event) => {
 		window.location.reload();
 	});
+	start_btn.addEventListener('click', (event) => {	
+		if (Number(size_input.value) > 0 && Number(mass_input.value) > 0){
+
+			let planet = new planets.Sprite(50, 50);
+			if (size_input.value > 300){
+				planet.d = 300;
+			} else {
+				planet.d = Number(size_input.value);
+			}
+			if (mass_input.value > 3000){
+				planet.mass = 3000 * earth.mass;
+			}else{
+				planet.mass = Number(mass_input.value) * earth.mass;
+			}
+			planet.image = random(planet_images)
+		}})
 
 }
 
@@ -58,21 +77,6 @@ function getGravityForce(object1, object2){
 
 function update() {
 	background(22);
-	if (kb.pressed('Enter') && Number(size_input.value) > 0 && Number(mass_input.value) > 0){
-
-		let planet = new planets.Sprite(50, 50);
-		if (size_input.value > 300){
-			planet.d = 300;
-		} else {
-			planet.d = Number(size_input.value);
-		}
-		if (mass_input.value > 3000){
-			planet.mass = 3000 * earth.mass;
-		}else{
-			planet.mass = Number(mass_input.value) * earth.mass;
-		}
-		planet.image = random(planet_images)
-	}
 	if (mouse.pressing() && planets.length > 0){
 		planets[planets.length - 1].moveTowards(mouse, .1);
 	}
@@ -84,7 +88,9 @@ function update() {
 	sun.attractTo(earth, getGravityForce(sun, earth));
 	allSprites.rotationLock = true;
 	for (let s of allSprites){
-		if (s.x > width+s.w) s.x = 0;
-		if (s.y > height+s.h) s.y = 0;
+		if (s.x > width+s.w) s.x = 0 - s.w;
+		if (s.y > height+s.h) s.y = 0 - s.h;
+		if (s.x < 0 - s.w) s.x = width + s.w;
+		if (s.y < 0 - s.h) s.y = height + s.h;
 	}
 }
