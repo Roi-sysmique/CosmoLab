@@ -164,7 +164,7 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-image: linear-gradient(to right, rgba(240, 128, 128, 0.571), rgba(221, 160, 221, 0.588));
+    background-image: linear-gradient(to right, #f5555d81, #f86a6d81, #fa7d7e81, #fc8f9081, #fca1a181);
     position: sticky;
     top: 0;
     z-index: 1000;
