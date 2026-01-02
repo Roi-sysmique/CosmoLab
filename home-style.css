@@ -33,17 +33,16 @@ header{
 
 #title{
     position: relative;
-    font-size: 95px;
+    font-size: clamp(3rem, 8vw, 6.5rem);
     width: fit-content;
     margin: auto;
     color: transparent;
 }
 
 #subtitle{
-    font-size: 30px;
-    width: 500px;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    width: min(500px, 90vw);
     color: transparent;
-    margin-left: 20px;
     background-image: linear-gradient(to right bottom, #d5d7e1, #c9d3e8, #8cb5e7, #58b4fb, #89c1de);
     background-clip: text;
     z-index: 1;
@@ -117,7 +116,6 @@ header{
     font-size: 25px;
     color: rgb(150, 150, 150);
     width: fit-content;
-    margin-left: 20px;
     margin-bottom: 0;
     opacity: 0;
     animation: opacity 1s forwards;
@@ -271,7 +269,7 @@ ul{
 }
 
 .section-title{
-    font-size: 60px;
+    font-size: clamp(2.5rem, 6vw, 4rem);
     margin-bottom: 0;
     background-image: linear-gradient(to right, #899af2, #74b0fa, #70c3f9, #7fd3f5, #9ae1f0);
     background-clip: text;
@@ -313,6 +311,9 @@ ul{
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     padding: 20px;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     transition: all 225ms ease-in-out;
 }
 
@@ -489,7 +490,7 @@ ul{
 
 #light-source-1 {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 65%;
     width: 900px;
     height: 900px;
@@ -497,7 +498,7 @@ ul{
     filter: blur(50px);
     transform: translate(-50%, -50%);
     pointer-events: none;
-    opacity: .3;
+    opacity: .4;
     z-index: 0;
     animation: ChangingForm 20s ease-in-out infinite alternate;
 }
@@ -564,7 +565,11 @@ ul{
 }
 
 .cours-card:hover .cours-img{
-    transform: scale(1.05);
+    transform: scale(1.1);
+}
+
+.cours-card:hover .image-container{
+    transform: scaleY(1.08);
 }
 
 
@@ -574,6 +579,7 @@ ul{
     overflow: hidden;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    transition: all 225ms ease-in-out;
 }
 
 .image-container img{
@@ -607,7 +613,7 @@ ul{
 .cours-description{
     font-size: 11px;
     color: #dcdcdc;
-    margin: 5px 10px;
+    margin: 8px 10px;
     flex-grow: 1;
 }
 
@@ -630,7 +636,8 @@ ul{
   margin-bottom: 10px;
 
   color: #fff;
-    display: inline-block;
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
     text-decoration: none;
     line-height: normal;
@@ -658,4 +665,123 @@ a{
 
 #Contact-title{
     background-image: linear-gradient(to left, #f2f555, #f5f476, #f6f493, #f7f3ae, #f6f3c9);;
+}
+#light-source-2 {
+    position: absolute;
+    top: 93%;
+    left: 25%;
+    width: 700px;
+    height: 700px;
+    background-image: linear-gradient(to right, #55f5d4, #72f5b8, #8df59f, #a7f585, #c1f56f);
+    filter: blur(50px);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: .25;
+    z-index: 0;
+    animation: ChangingForm 20s ease-in-out infinite alternate;
+}
+
+.address-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0;
+    background-image: linear-gradient(to right bottom, #c4bebe, #b9b1b4, #aca5aa, #9e9aa1, #8e8f98);
+    opacity: 0.8;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-self: center;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.18);
+    transition: all 225ms ease-in-out;
+}
+
+.address-container:hover{
+    opacity: 1;
+    transform: translateY(-5%) scale(1.02);
+}
+
+.container-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.icon-container{
+    width: 45px;
+    height: 45px;
+    margin: 15px;
+    background-image: linear-gradient(to right bottom, #ffffff, #d4c3c8, #c4b9c1, #b4b0b8, #d5d6db);
+    align-content: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 30px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    opacity: 1.2;
+}
+
+#Contact-containt{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#affiliated-links-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 800px;
+}
+
+.affiliated-link{
+    font-size: 12px;
+    color: #e0e0e0;
+}
+
+.icon-label{
+    font-weight: 700;
+}
+
+#propos-text-citation{
+    font-style: italic;
+    margin-top: 10px;
+    color: #cfcfcf;
+    font-size: 14px;
+    position: relative;
+    justify-self: flex-start;}
+
+#gillemet{
+    font-style: normal;
+    margin-top: 10px;
+    color: #cfcfcf;
+    font-size: 30px;
+    position: relative;
+    justify-self: flex-start;
+}
+
+#propos-text-citation::before{
+    content: "";
+    display: inline-block;
+    width: 3px;
+    position: absolute;
+    top:0;
+    left: -10px;
+    height: 100%;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, #576ef4, #7385f7, #8e9cf8, #a7b2f9, #c1c9f8);
+}
+
+#Author{
+    margin-top: 10px;
+    color: #cfcfcf;
+    font-size: 20px;
+    position: relative;
+    justify-self: flex-start;
+    font-style: normal;
 }
