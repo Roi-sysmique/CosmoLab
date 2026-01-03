@@ -1,4 +1,4 @@
-# 🌌 CosmoLab
+# CosmoLab
 
 **CosmoLab** est une application web éducative interactive dédiée à la découverte de l’astronomie et des phénomènes astrophysiques.  
 Le projet vise à rendre accessibles des concepts complexes grâce à la **visualisation**, à l’**interactivité** et à des **simulations numériques**.
@@ -7,7 +7,7 @@ Ce projet est réalisé dans le cadre du **Projet Personnel du PEI (IB)**.
 
 ---
 
-## 🎯 Objectif du projet
+##  Objectif du projet
 
 L’objectif principal de CosmoLab est de proposer une alternative ludique et intuitive à l’apprentissage traditionnel de l’astronomie, en permettant aux utilisateurs de :
 
@@ -17,7 +17,7 @@ L’objectif principal de CosmoLab est de proposer une alternative ludique et in
 
 ---
 
-## 🧠 Thématiques abordées
+##  Thématiques abordées
 
 - Gravitation universelle (Newton)
 - Mécaniques orbitales
@@ -27,7 +27,7 @@ L’objectif principal de CosmoLab est de proposer une alternative ludique et in
 
 ---
 
-## 🧪 Fonctionnalités principales
+##  Fonctionnalités principales
 
 - 📘 Pages de cours structurées et illustrées
 - 🎮 Simulations interactives en temps réel
@@ -36,7 +36,7 @@ L’objectif principal de CosmoLab est de proposer une alternative ludique et in
 
 ---
 
-## 🛠️ Technologies utilisées
+##  Technologies utilisées
 
 - **HTML / CSS** – structure et design
 - **JavaScript** – logique et interactivité
