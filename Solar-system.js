@@ -61,6 +61,7 @@ function setup(){
 			}
 			if (mass_input.value > 3000){
 				planet.mass = 3000 * earth.mass;
+				mass_input.value = 3000;
 			}else{
 				planet.mass = Number(mass_input.value) * earth.mass;
 			}

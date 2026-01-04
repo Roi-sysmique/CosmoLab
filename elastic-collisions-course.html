@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="elastic-collisions-style.css">
+    <link rel="icon" href="Assets/favicon.png">	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <title>Fiche Physique – Collisions élastiques</title>
+    <script src="https://kit.fontawesome.com/2d76e138c0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+    <h2 id="subtitle">Fiche | Physique – Mécanique</h2><br>
+    <h1 id="title">Les collisions élastiques</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a class="nav-links" href="#definition">Définition</a></li>
+        <li><a class="nav-links" href="#law">Lois de conservation</a></li>
+        <li><a class="nav-links" href="#Application">Applications</a></li>
+        <li><a class="nav-links" href="#Einstein">Approfondissement</a></li>
+        <li><a class="nav-links" href="#Simulation">Simulation interactive</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<!-- DÉFINITION -->
+<div id="definition">
+    <h3 id="title-definition">📕 Définition :</h3><br>
+    <p>
+        Une collision élastique est une interaction entre deux objets au cours de laquelle
+        <strong>la quantité de mouvement totale et l’énergie cinétique totale sont conservées</strong>.
+        Les objets rebondissent sans perte d’énergie sous forme de chaleur ou de déformation
+        permanente.
+    </p>
+</div>
+
+<!-- LOIS -->
+<div class="section" id="law">
+    <h3 id="title-law">Lois fondamentales des collisions élastiques</h3>
+    <p class="textcontent">
+        L’étude des collisions élastiques repose sur les lois de Newton et sur deux principes
+        fondamentaux de la physique : la conservation de la quantité de mouvement et
+        la conservation de l’énergie cinétique.
+    </p>
+
+    <div id="equation">
+        <p>m₁v₁ + m₂v₂ = m₁v'₁ + m₂v'₂</p>
+    </div>
+    <br>
+    <div id="equation">
+        <p>½m₁v₁² + ½m₂v₂² = ½m₁v'₁² + ½m₂v'₂²</p>
+    </div>
+
+    <div id="definer">
+        <div class="value" style="grid-area: box1;">
+            m₁ : masse du premier objet en kg
+        </div>
+        <div class="value" style="grid-area: box2;">
+            m₂ : masse du second objet en kg
+        </div>
+        <div class="value" style="grid-area: box3;">
+            v₁, v₂ : vitesses avant collision en m/s
+        </div>
+        <div class="value" style="grid-area: box4;">
+            v'₁, v'₂ : vitesses après collision en m/s
+        </div>
+    </div>
+</div>
+
+
+<div id="equation-demonstration">
+    <h3 id="title-equation">Interprétation de la collision</h3>
+    <p class="textcontent">
+        La démonstration interactive ci-dessous met en évidence une collision élastique
+        en une dimension. Lors du choc, les objets échangent leur quantité de mouvement
+        sans dissipation d’énergie.
+    </p>
+    <p class="textcontent">
+        Dans cette simulation, les masses et les vitesses peuvent être modifiées afin
+        d’observer directement l’influence de ces paramètres sur le résultat de la collision.
+    </p>
+
+    <p class="textcontent">
+        Cette expérience permet de comprendre pourquoi les collisions élastiques sont
+        idéales pour modéliser les interactions microscopiques, notamment dans les gaz
+        et en physique des particules.
+    </p>
+</div>
+
+
+<div id="data">
+    <div class="data-items">
+    <label class="label-data" for="m1">Entrer la masse de l'objet 1 en kg</label>
+    <input type="number" class="input-data" id="m1" min="1" max="200">
+    </div>
+    <div class="data-items">
+    <label class="label-data" for="m2">Entrer la masse de l'objet 2 en kg</label>
+    <input type="number" class="input-data" id="m2" min="1" max="200">
+    </div>
+    <div class="data-items">
+    <label class="label-data" for="v1">Entrer la vitesse initiale de l'objet 1 en m/s</label>
+    <input type="number" class="input-data" id="v1" max="25">
+    </div>
+    <div class="data-items">
+    <label class="label-data" for="v2">Entrer la vitesse initiale de l'objet 2 en m/s</label>
+    <input type="number" class="input-data" id="v2" max="25">
+    </div>
+</div>
+
+<div id="canvas-container"></div>
+
+<div id="button-container">
+    <button id="start"><i class="fa-solid fa-circle-play"></i></button>
+    <button id="repeat"><i class="fa-solid fa-repeat"></i></button>
+    <button id="pause"><i class="fa-solid fa-pause"></i></button>
+</div>
+
+<script src="https://q5js.org/q5.js"></script>
+<script src="https://p5play.org/v3/planck.min.js"></script>
+<script src="https://p5play.org/v3/p5play.js"></script>
+<script src="elastic-collisions-demo.js"></script>
+
+
+<div class="section" id="Application">
+    <h3 id="title-application">Applications des collisions élastiques</h3>
+    <p class="textcontent">
+        Les collisions élastiques sont essentielles pour décrire le comportement des gaz,
+        les interactions entre particules et de nombreux systèmes idéalisés en mécanique.
+    </p>
+
+    <div id="topics-container">
+        <div class="topics">Gaz parfaits</div>
+        <div class="topics">Physique des particules</div>
+        <div class="topics">Chocs mécaniques</div>
+        <div class="topics">Astrophysique</div>
+    </div>
+</div>
+
+<div class="section" id="Einstein">
+    <h3 id="title-einstein">Approfondissement du concept</h3>
+    <p>
+        Les collisions élastiques constituent un modèle fondamental en physique.
+        Elles permettent de comprendre les lois de conservation utilisées dans des
+        domaines plus avancés comme la mécanique quantique et la physique statistique.
+    </p>
+
+    <p class="textcontent">
+        La vidéo suivante propose une explication claire et visuelle des collisions
+        élastiques et de leurs propriétés fondamentales.
+    </p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CFbo_nBdBco?si=tunBBuUwERQ_4hi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<!-- SIMULATION -->
+<div class="section" id="Simulation">
+    <h3 id="simulation-title">Simulation interactive</h3>
+    <p>
+        Cette simulation permet d’explorer les collisions élastiques en modifiant les
+        masses et les vitesses initiales. Elle illustre concrètement la conservation
+        simultanée de l’énergie cinétique et de la quantité de mouvement.
+    </p>
+
+    <a href="Collisions-Pi.html">
+        <button class="button-29">Lancer la simulation</button>
+    </a>
+</div>
+
+</main>
+
+</body>
+</html>
