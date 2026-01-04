@@ -28,7 +28,7 @@ function setup(){
     start_btn.addEventListener('click', () => {
         if (world.timeScale === 0){
             world.timeScale = 1;
-            if (input_m2.value){
+            if (input_m2.value && Number(input_m2.value) > 1 && Number(input_m2.value) < 3000){
                 m2 = Number(input_m2.value)
             }else{
                 m2 = 100;
