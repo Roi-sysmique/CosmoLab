@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="icon" href="favicon.png">
+	<link rel="icon" href="Assets/favicon.png">
 	<link rel="stylesheet" href="home-style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,7 @@
 			background-color: black;
 			margin: 0;
 			padding: 0;
+			overflow-x: hidden;
 		}
 	</style>
 </head>
@@ -25,6 +26,7 @@
 	<div id="nebuleuse"></div>
 	<div id="soleil"></div>
 	<div id="purple-nebuleuse"></div>
+	<div id="yellow-nebuleuse"></div>
 	<main>
 		<nav>
 			<h3 id="nav-title"><i style="color: rgba(29,29,117,1)" class="fa-regular fa-star-half"></i> <span id="nav-title-text">CosmoLab</span></h3>
@@ -43,7 +45,7 @@
 				<h1 id="title">CosmoLab</h1>
 				<h3 id="subtitle">Une nouvelle façon d'apprendre. Aprenez de façons ludique et interactive !</h3>
 			</div>
-			<div id="logo-container"><img src="logo.png" alt="logo"></div>
+			<div id="logo-container"><img src="Assets/logo.png" alt="logo"></div>
 		</header>
 
 		<div class="section" id="Presentation">
@@ -56,7 +58,6 @@
 				complexes — comme la gravitation, les orbites ou l’espace-temps — à travers
 				des explications claires et des visualisations interactives.
 				</p>
-				<br>
 				<p>
 				Contrairement à un cours classique, CosmoLab met l’accent sur la compréhension
 				visuelle et l’expérimentation. Chaque notion est accompagnée de démonstrations
@@ -75,7 +76,7 @@
 				CosmoLab a été conçu pour changer cette perception en proposant une approche
 				interactive et progressive, adaptée aussi bien aux curieux qu’aux passionnés.
 				</p>
-				<br>
+
 				<p>
 				Grâce aux simulations, l’utilisateur peut modifier des paramètres comme la masse,
 				la distance ou la vitesse, et observer directement leurs effets. Cette approche permet
@@ -89,7 +90,7 @@
 			<h3 class="section-subtitle" id="Cours-subtitle">Des cours pour tous les niveaux</h3>
 			<div id="cours-container" >
 				<div class="cours-card">
-					<div class="image-container"><img class="cours-img" src="gravity-course-img.png" alt="gravity-course-img"></div>
+					<div class="image-container"><img class="cours-img" src="Assets/gravity-course-img.png" alt="gravity-course-img"></div>
 				<div class="cours-info">
 					<span class="Cours-title">La gravitation universelle</span>
 					<div class="sim-badge">Inclus une simulation intéractive</div>
@@ -99,11 +100,27 @@
 						gravitationnelles et de comprendre pourquoi elles sont si faibles entre des objets
 						du quotidien, malgré des masses gigantesques.
 						</p>
-					<a href="gravity-course.html" class="button-52" role="button"><i class="fa-solid fa-arrow-up-right-from-square"></i>Voir</a>
+						<a href="gravity-course.html" class="button-87" role="button">découvrir <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
 				</div>
 				</div>
 				<div class="cours-card">
-					<div class="image-container"><img class="cours-img" src="gravity-course-img.png" alt="gravity-course-img"></div>
+					<div class="image-container"><img class="cours-img" src="Assets/pi-course-image.png" alt="gravity-course-img"></div>
+				<div class="cours-info">
+					<span class="Cours-title">Les collisions Elastic</span>
+					<div class="sim-badge">Inclus une simulation intéractive</div>
+					<p class="cours-description">
+						Ce cours explore le principe des collisions élastiques et les lois de conservation.
+						Il s’appuie sur une simulation interactive permettant de visualiser les chocs
+						entre des objets et de comprendre comment la masse et la vitesse influencent
+						leur comportement lors des collisions.
+					</p>
+
+			
+						<a href="elastic-collisions-course.html" class="button-87" role="button">découvrir <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+				</div>
+				</div>
+				<div class="cours-card">
+					<div class="image-container"><img class="cours-img" src="Assets/gravity-course-img.png" alt="gravity-course-img"></div>
 				<div class="cours-info">
 					<span class="Cours-title">La gravitation universelle</span>
 					<div class="sim-badge">Inclus une simulation intéractive</div>
@@ -113,21 +130,7 @@
 						gravitationnelles et de comprendre pourquoi elles sont si faibles entre des objets
 						du quotidien, malgré des masses gigantesques.
 						</p>					
-						<a href="gravity-course.html" class="button-52" role="button"><i class="fa-solid fa-arrow-up-right-from-square"></i>Voir</a>
-				</div>
-				</div>
-				<div class="cours-card">
-					<div class="image-container"><img class="cours-img" src="gravity-course-img.png" alt="gravity-course-img"></div>
-				<div class="cours-info">
-					<span class="Cours-title">La gravitation universelle</span>
-					<div class="sim-badge">Inclus une simulation intéractive</div>
-						<p class="cours-description">
-						Ce cours explore la loi de la gravitation universelle, de Newton à Einstein.
-						Il s’appuie sur une simulation interactive permettant de visualiser les forces
-						gravitationnelles et de comprendre pourquoi elles sont si faibles entre des objets
-						du quotidien, malgré des masses gigantesques.
-						</p>					
-						<a href="gravity-course.html" class="button-52" role="button"><i class="fa-solid fa-arrow-up-right-from-square"></i>Voir</a>
+						<a href="gravity-course.html" class="button-87" role="button">découvrir <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
 				</div>
 				</div>
 			</div>
@@ -188,6 +191,26 @@
 			</div>
 	</main>
 	<script src="https://kit.fontawesome.com/2d76e138c0.js" crossorigin="anonymous"></script>
-</body>
+	<!--
+ASCII Shrek 
 
+⢀⡴⠑⡄⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  
+⠸⡇⠀⠿⡀⠀⠀⠀⣀⡴⢿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀  
+⠀⠀⠀⠀⠑⢄⣠⠾⠁⣀⣄⡈⠙⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀  
+⠀⠀⠀⠀⢀⡀⠁⠀⠀⠈⠙⠛⠂⠈⣿⣿⣿⣿⣿⠿⡿⢿⣆⠀⠀⠀⠀⠀⠀⠀  
+⠀⠀⠀⢀⡾⣁⣀⠀⠴⠂⠙⣗⡀⠀⢻⣿⣿⠭⢤⣴⣦⣤⣹⠀⠀⠀⢀⢴⣶⣆  
+⠀⠀⢀⣾⣿⣿⣿⣷⣮⣽⣾⣿⣥⣴⣿⣿⡿⢂⠔⢚⡿⢿⣿⣦⣴⣾⠁⠸⣼⡿  
+⠀⢀⡞⠁⠙⠻⠿⠟⠉⠀⠛⢹⣿⣿⣿⣿⣿⣌⢤⣼⣿⣾⣿⡟⠉⠀⠀⠀⠀⠀  
+⠀⣾⣷⣶⠇⠀⠀⣤⣄⣀⡀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀   
+⠀⠉⠈⠉⠀⠀⢦⡈⢻⣿⣿⣿⣶⣶⣶⣶⣤⣽⡹⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀  
+⠀⠀⠀⠀⠀⠀⠀⠉⠲⣽⡻⢿⣿⣿⣿⣿⣿⣿⣷⣜⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀  
+⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣷⣶⣮⣭⣽⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀  
+⠀⠀⠀⠀⠀⠀⣀⣀⣈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀  
+⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀  
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠻⠿⠿⠿⠿⠛⠉                                  
+
+-->
+</body>
 </html>
+

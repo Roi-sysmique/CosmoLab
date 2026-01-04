@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="Assets/favicon.png">
+	<link rel="stylesheet" href="Collisions-Pi.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+	<title>Fiche AstroPhysique collisions elastic simulation</title>
+	<style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+            font-family: Raleway, 'sans-serif';
+			background-image: radial-gradient(circle, #6c45cc, #605fd6, #5b74dc, #5e87df, #6b99de);
+			background-size: 300% 300%;
+			background-repeat: no-repeat;
+			height: 100%;
+			backdrop-filter: blur(25px);
+			z-index: -100;
+			animation: movingBackground 10s infinite ease-in-out alternate;
+			display: flex;
+			flex-direction: column;
+			overflow-x: hidden;
+		}
+
+		@keyframes movingBackground {
+			0%{background-position: 0% 50%; }
+			50%{background-position: 50% 50%;}
+			100%{background-position: 100% 100%;}
+		}
+
+		#nebula{
+			position: absolute;
+			top: 50%;
+			left: 65%;
+			width: 500px;
+			height: 500px;
+			background-image: linear-gradient(to left, #9955f5, #a56ff3, #b088f1, #bb9fed, #c7b5e8);
+			filter: blur(50px);
+			transform: translate(-50%, -50%);
+			pointer-events: none;
+			opacity: .4;
+			z-index: -1;
+			animation: purpleNebulaMove 10s ease-in-out infinite alternate;
+		}
+
+		@keyframes purpleNebulaMove {
+			0% {
+				transform: translate(0, 0) scale(1);
+				opacity: 0.35;
+				filter: blur(14px);
+				border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+			}
+
+			20% {
+				transform: translate(160px, -60px) scale(1.35);
+				opacity: 0.45;
+				filter: blur(20px);
+				border-radius: 85% 15% 60% 40% / 25% 75% 30% 70%;
+			}
+
+			40% {
+				transform: translate(-180px, 90px) scale(1.45);
+				opacity: 0.30;
+				filter: blur(26px);
+				border-radius: 20% 80% 30% 70% / 75% 25% 65% 35%;
+			}
+
+			60% {
+				transform: translate(120px, 140px) scale(1.25);
+				opacity: 0.5;
+				filter: blur(18px);
+				border-radius: 70% 30% 85% 15% / 35% 65% 20% 80%;
+			}
+
+			80% {
+				transform: translate(-90px, -40px) scale(1.15);
+				opacity: 0.4;
+				filter: blur(22px);
+				border-radius: 40% 60% 25% 75% / 60% 40% 70% 30%;
+			}
+
+			100% {
+				transform: translate(0, 0) scale(1);
+				opacity: 0.35;
+				filter: blur(14px);
+				border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+			}
+		}
+		#nebula-2{
+			position: absolute;
+			top: 10%;
+			left: 10%;
+			width: 500px;
+			height: 500px;
+			background-image: linear-gradient(to right bottom, #f46b7b, #f68588, #f79d99, #f6b4ac, #f4cac2);
+			filter: blur(50px);
+			transform: translate(-50%, -50%);
+			pointer-events: none;
+			opacity: .0;
+			z-index: -1;
+			animation: purpleNebulaMove 10s ease-in-out infinite alternate;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<main>
+			<div id="nebula"></div>
+			<div id="nebula-2"></div>
+			<div id="containt-container">
+				<h1 id="title">Calculez <span id="pi">&pi;</span></h1>
+				<div id="data">
+					<label for="m2">Entrer la masse en kg du second block:</label>
+					<input type="number" name="m2" id="m2" min="1" max="4000">
+				</div>
+				<div id="comand-bar">
+					<button style="grid-area: box1;" class="buttons" id="button-8" role="button">
+					<span class="text"><i class="fa-solid fa-play"></i>Commencer</span>
+					</button>
+					<button style="grid-area: box2;" class="buttons" id="replay"><span id="replay-icon"><i class="fa-solid fa-arrows-rotate"></i></span> Recommencer</button>
+					<button style="grid-area: box3;" class="buttons" id="pause"><i class="fa-solid fa-pause"></i> Pause</button>
+				</div>
+			</div>
+			<div id="canvas-container"></div>
+		</main>
+<div id="explanation">
+	<strong style="color:#f46b7b;font-size: 20px;">Fun Fact !</strong>
+
+    <p>
+        Cette simulation repose sur un résultat surprenant de la physique des
+        <strong>collisions élastiques</strong>. On considère deux blocs alignés
+        sur une même dimension : un premier bloc possède une
+        <strong>vitesse initiale</strong>, tandis que le second est
+        <strong>initialement immobile</strong>, placé entre le premier bloc et un mur.
+        Les collisions entre les deux blocs, ainsi qu’entre le second bloc et le mur,
+        sont supposées parfaitement <strong>élastiques</strong>. Cela signifie que
+        l’énergie cinétique et la quantité de mouvement sont conservées à chaque choc.
+        En comptant le <strong>nombre total de collisions</strong> (entre les deux blocs
+        et avec le mur), puis en divisant ce nombre par la
+        <strong>racine carrée du rapport des masses</strong> :
+    </p>
+    <p style="text-align: center; font-weight: bold;">
+        Nombre de collisions ÷ √(m₂ / m₁)
+    </p>
+    <p>
+        on obtient une <strong>approximation de la valeur de π</strong>.
+        Plus la masse du second bloc est grande par rapport à celle du premier,
+        plus cette approximation devient précise.
+        Théoriquement, lorsque la masse du second bloc
+        <strong>tend vers l’infini</strong>, la valeur obtenue converge vers π
+        avec une précision arbitrairement élevée. Ce résultat remarquable
+        est une conséquence directe des lois de conservation appliquées aux
+        collisions élastiques.
+        Cependant, dans cette simulation, l’approximation de π reste limitée.
+        Des contraintes techniques, notamment sur la
+        <strong>masse maximale du second bloc</strong> et la précision numérique,
+        empêchent d’atteindre des valeurs extrêmement élevées.
+        Malgré ces limites, l’expérience illustre de manière élégante
+        le lien profond entre la <strong>physique classique</strong>,
+        les <strong>collisions élastiques</strong> et une constante
+        fondamentale des mathématiques.
+    </p>
+</div>
+
+	</section>
+	<p id="pi-aproximation"><span id="pi">&pi;</span> &asymp; <span id="pi-value">3.14159</span></p>
+
+	
+	<!-- ONLINE LINKS -->
+	<script src="https://q5js.org/q5.js"></script>
+	<script src="https://p5play.org/v3/planck.min.js"></script>
+	<script src="https://p5play.org/v3/p5play.js"></script>
+	<!-- YOUR SKETCH -->
+	<script src="Collisions-PI-Calc.js"></script>
+    <!--Les Icons-->
+    <script src="https://kit.fontawesome.com/2d76e138c0.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
