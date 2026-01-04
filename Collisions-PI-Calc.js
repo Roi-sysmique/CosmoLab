@@ -83,7 +83,7 @@ function ApplyElasticCollisions(object1, object2, mass1, mass2){
 }
 
 function update(){
-    background(55);
+    background(22);
     distance = dist(obj1.x, obj1.y, obj2.x, obj2.y);
     if (distance <= obj1.width && !hasCollided){
         ApplyElasticCollisions(obj1, obj2, m1, m2);
@@ -98,7 +98,7 @@ function update(){
     obj1.text = String(round(obj1.vel.x * 100)/100) + ' m/s';
     obj2.text = String(round(obj2.vel.x * 100)/100) + ' m/s';
 
-    if (obj1.x <= obj1.halfWidth+3){
+    if (obj1.x <= obj1.halfWidth+5){
         obj1.vel.x = OneDElasticCollisions(obj1.vel.x, 1, 0, 1000)[0];
         collisions++;
     }
