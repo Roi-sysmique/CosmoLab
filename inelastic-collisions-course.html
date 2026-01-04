@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inelastic-collisions-style.css">
+    <link rel="icon" href="Assets/favicon.png">	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <title>Fiche Physique – Collisions inélastiques</title>
+    <script src="https://kit.fontawesome.com/2d76e138c0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+    <h2 id="subtitle">Fiche | Physique – Mécanique</h2><br>
+    <h1 id="title">Les collisions inélastiques</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a class="nav-links" href="index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+        <li><a class="nav-links" href="#definition">Définition</a></li>
+        <li><a class="nav-links" href="#law">Principes physiques</a></li>
+        <li><a class="nav-links" href="#Application">Applications</a></li>
+        <li><a class="nav-links" href="#Einstein">Approfondissement</a></li>
+        <li><a class="nav-links" href="#Simulation">Simulation interactive</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<div id="definition">
+    <h3 id="title-definition">📕 Définition :</h3><br>
+    <p>
+        Une collision inélastique est une interaction entre deux objets au cours de laquelle
+        <strong>la quantité de mouvement totale est conservée, mais l’énergie cinétique ne l’est pas</strong>.
+        Une partie de l’énergie est dissipée sous forme de chaleur, de son ou de déformation
+        permanente des objets.
+    </p>
+</div>
+
+<div class="section" id="law">
+    <h3 id="title-law">Principes fondamentaux des collisions inélastiques</h3>
+    <p class="textcontent">
+        Les collisions inélastiques obéissent aux lois de Newton et au principe de conservation
+        de la quantité de mouvement. Contrairement aux collisions élastiques idéales, ces
+        interactions impliquent une perte d’énergie mécanique.
+    </p>
+
+    <div id="equation">
+        <p>m₁v₁ + m₂v₂ = m₁v'₁ + m₂v'₂</p>
+    </div>
+    <br>
+    <div id="equation">
+        <p>e = (v'₂ − v'₁) / (v₁ − v₂)</p>
+    </div>
+
+    <div id="definer">
+        <div class="value" style="grid-area: box1;">
+            m₁, m₂ : masses des objets en kilogrammes (kg)
+        </div>
+        <div class="value" style="grid-area: box2;">
+            v₁, v₂ : vitesses avant collision en mètres par seconde (m/s)
+        </div>
+        <div class="value" style="grid-area: box3;">
+            v'₁, v'₂ : vitesses après collision en mètres par seconde (m/s)
+        </div>
+        <div class="value" style="grid-area: box4;">
+            e : coefficient de restitution (0 ≤ e ≤ 1)
+        </div>
+    </div>
+</div>
+
+<div id="equation-demonstration">
+    <h3 id="title-equation">Interprétation de la collision</h3>
+    <p class="textcontent">
+        Lors d’une collision inélastique, les objets ne rebondissent pas parfaitement.
+        Une fraction de l’énergie cinétique initiale est transformée en d’autres formes
+        d’énergie non mécaniques.
+    </p>
+    <p class="textcontent">
+        Le coefficient de restitution permet de quantifier le caractère plus ou moins
+        dissipatif du choc. Une valeur proche de zéro indique une collision fortement
+        inélastique.
+    </p>
+    <p class="textcontent">
+        Dans le cas d’une collision parfaitement inélastique, les deux objets restent
+        collés après l’impact et se déplacent avec une vitesse commune.
+    </p>
+</div>
+
+<div id="data">
+    <div class="data-items" style="grid-area: box1;">
+        <label class="label-data" for="m1">Entrer la masse de l'objet 1 en kg</label>
+        <input type="number" class="input-data" id="m1" min="1" max="200">
+    </div>
+    <div class="data-items" style="grid-area: box2;">
+        <label class="label-data" for="m2">Entrer la masse de l'objet 2 en kg</label>
+        <input type="number" class="input-data" id="m2" min="1" max="200">
+    </div>
+    <div class="data-items" style="grid-area: box3;">
+        <label class="label-data" for="v1">Entrer la vitesse initiale de l'objet 1 en m/s</label>
+        <input type="number" class="input-data" id="v1" max="25">
+    </div>
+    <div class="data-items" style="grid-area: box4;">
+        <label class="label-data" for="v2">Entrer la vitesse initiale de l'objet 2 en m/s</label>
+        <input type="number" class="input-data" id="v2" max="25">
+    </div>
+    <div class="data-items" style="grid-area: box5;">
+        <label class="label-data" for="e">Entrer le coefficient de restitution (entre 0 et 1)</label>
+        <input type="number" class="input-data" id="e" min="0" max="1">
+    </div>
+</div>
+
+<div id="canvas-container"></div>
+
+<div id="button-container">
+    <button id="start"><i class="fa-solid fa-circle-play"></i></button>
+    <button id="repeat"><i class="fa-solid fa-repeat"></i></button>
+    <button id="pause"><i class="fa-solid fa-pause"></i></button>
+</div>
+
+<script src="https://q5js.org/q5.js"></script>
+<script src="https://p5play.org/v3/planck.min.js"></script>
+<script src="https://p5play.org/v3/p5play.js"></script>
+<script src="inelastic-collisions-demo.js"></script>
+
+<div class="section" id="Application">
+    <h3 id="title-application">Applications des collisions inélastiques</h3>
+    <p class="textcontent">
+        Les collisions inélastiques sont omniprésentes dans les systèmes réels, où
+        les pertes d’énergie sont inévitables et jouent un rôle essentiel.
+    </p>
+
+    <div id="topics-container">
+        <div class="topics">Sécurité automobile</div>
+        <div class="topics">Chocs mécaniques</div>
+        <div class="topics">Balistique</div>
+        <div class="topics">Ingénierie des matériaux</div>
+    </div>
+</div>
+
+<div class="section" id="Einstein">
+    <h3 id="title-einstein">Approfondissement du concept</h3>
+    <p>
+        Les collisions inélastiques constituent une modélisation réaliste des interactions
+        mécaniques. Elles permettent de comprendre comment l’énergie est dissipée
+        lors des chocs dans le monde réel.
+    </p>
+
+    <p class="textcontent">
+        La vidéo suivante illustre le rôle du coefficient de restitution et ses
+        conséquences sur le comportement des objets après une collision.
+    </p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/C1XuwHLacao?si=pxNauQeSaMg3v9Za" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+</main>
+
+</body>
+</html>
