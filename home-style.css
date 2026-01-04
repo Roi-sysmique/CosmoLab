@@ -4,6 +4,9 @@ html, body {
     width: 100%;
     min-height: 100%; 
     height: auto; 
+    overflow-x: hidden; 
+    overflow-y: auto;   
+    background-color: #02040f;
 }
 
 body{
@@ -324,6 +327,7 @@ ul{
     flex-direction: column;
     justify-content: flex-start;
     transition: all 225ms ease-in-out;
+    backdrop-filter: blur(10px);
 }
 
 .section-containt:hover{
@@ -503,7 +507,7 @@ ul{
 
 #light-source-1 {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 65%;
     width: 900px;
     height: 900px;
@@ -679,7 +683,7 @@ a{
 }
 #light-source-2 {
     position: absolute;
-    top: 70%;
+    top: 68%;
     left: 25%;
     width: 700px;
     height: 700px;
@@ -805,8 +809,8 @@ a{
 }
 
 #yellow-nebuleuse{
-    top: 90%;
-    left: 75%;
+    top: 86%;
+    left: 65%;
     background-image: linear-gradient(to right bottom, #f1f457, #f2f575, #f3f690, #f4f7a9, #f5f8c1);
     position: absolute;
     width: 900px;
@@ -817,4 +821,16 @@ a{
     opacity: .3;
     z-index: 0;
     animation: ChangingForm 20s ease-in-out infinite alternate;
+    overflow: hidden;
+    scroll-behavior: none;
+}
+
+#nebuleuse,
+#purple-nebuleuse,
+#yellow-nebuleuse,
+#soleil,
+#light-source-1,
+#light-source-2 {
+    pointer-events: none;   /* tu l'avais déjà */
+    overflow: hidden;       /* empêche les scrollbars internes */
 }

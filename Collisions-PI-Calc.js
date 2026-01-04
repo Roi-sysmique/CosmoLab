@@ -62,7 +62,7 @@ function setup(){
 
 	s.w = size;
 	s.h = size;
-	s.image = random(['➕', '➗']);
+	s.image = random(['➕', '➗', '✖']);
 	s.rotationSpeed = random(1, 3);
 	s.layer = 1;
 	}
