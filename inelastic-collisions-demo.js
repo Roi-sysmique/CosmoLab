@@ -105,7 +105,7 @@ function update() {
     obj1.text = round(obj1.vel.x*100)/100 + ' m/s';
     obj2.text = round(obj2.vel.x*100)/100 + ' m/s';
 
-    // murs
+    
     if (obj1.x <= obj1.halfWidth + gap) obj1.vel.x *= -1;
     if (obj2.x >= width - obj2.halfWidth - gap) obj2.vel.x *= -1;
 }

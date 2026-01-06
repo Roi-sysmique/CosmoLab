@@ -150,7 +150,9 @@ canvas{
 }
 
 .button-82-front {
-  display: block;
+  display: flex;              
+  align-items: center;        
+  justify-content: center; 
   position: relative;
   padding: 12px 27px;
   border-radius: 12px;
@@ -159,6 +161,7 @@ canvas{
   background: hsl(345deg 100% 47%);
   will-change: transform;
   transform: translateY(-4px);
+  text-align: center;
   transition:
     transform
     600ms

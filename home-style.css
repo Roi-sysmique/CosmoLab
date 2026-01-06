@@ -770,8 +770,8 @@ a{
     font-size: 14px;
     position: relative;
 
-    text-align: left;   /* ✅ ALIGNEMENT DU TEXTE */
-    line-height: 1.6;   /* meilleure lisibilité */
+    text-align: left;   
+    line-height: 1.6;   
     padding: 10px;
     padding-left: 20px;
 }
@@ -831,6 +831,6 @@ a{
 #soleil,
 #light-source-1,
 #light-source-2 {
-    pointer-events: none;   /* tu l'avais déjà */
-    overflow: hidden;       /* empêche les scrollbars internes */
+    pointer-events: none;   
+    overflow: hidden;       
 }
