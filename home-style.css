@@ -49,7 +49,7 @@ header{
     background-image: linear-gradient(to right bottom, #d5d7e1, #c9d3e8, #8cb5e7, #58b4fb, #89c1de);
     background-clip: text;
     z-index: 1;
-    animation: ShiningEffect 2s steps(8) forwards 2.5s, ApparitionEffect 2s ease-in-out forwards 0s;
+    animation: ShiningEffect 2s ease-in-out forwards 2.5s, ApparitionEffect 2s ease-in-out forwards 0s;
     background-size: 300% 300%;
 }
 
@@ -185,7 +185,6 @@ nav{
     align-items: center;
     justify-content: space-between;
     position: sticky;
-    top: 0;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     z-index: 10;
