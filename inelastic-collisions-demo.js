@@ -27,7 +27,7 @@ function setup() {
     obj2.image = '🟥';
     obj2.vel.x = -1;
 
-    world.timeScale = 0; // start paused
+    world.timeScale = 0;
 
     pause_btn.addEventListener('click', () => world.timeScale = 0);
 
@@ -87,12 +87,6 @@ function update() {
     background(55);
 
     let distance = dist(obj1.x, obj1.y, obj2.x, obj2.y);
-    print(e)
-    print(m1)
-    print(m2)
-    print(v1)
-    print(v2)
-    print('--------------')
     if (distance < obj1.width + gap && !hasCollided){
         ApplyElasticCollisions(obj1, obj2, m1, m2, e);
         hasCollided = true;
