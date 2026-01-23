@@ -302,7 +302,7 @@ ul{
 
 #CosmoLab{
     position: relative;
-    font-size: 55px;
+    font-size: clamp(2.5rem, 6vw, 4rem);
     margin-bottom: 0;
     background-image: linear-gradient(to right, #899af2, #74b0fa, #70c3f9, #7fd3f5, #9ae1f0);
     background-clip: text;
